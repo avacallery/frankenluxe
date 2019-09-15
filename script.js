@@ -36,6 +36,10 @@ li.appendChild(deleteButton);
 list.appendChild(li); 
 });
 
+<<<<<<< HEAD
+
+
+=======
     // hide drinks
     const hideBox = document.querySelector('#hide');
     hideBox.addEventListener('change', function(e){
@@ -61,3 +65,4 @@ list.appendChild(li);
       });
     });
 }) 
+>>>>>>> v9_s
