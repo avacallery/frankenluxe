@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
     
-    
     const list = document.querySelector('#drink-list ul'); 
     const forms = document.forms;   
-    
 
 //delete drinks
 list.addEventListener('click', (e) => {
@@ -38,7 +36,7 @@ li.appendChild(deleteButton);
 list.appendChild(li); 
 });
 
-    // hide books
+    // hide drinks
     const hideBox = document.querySelector('#hide');
     hideBox.addEventListener('change', function(e){
       if(hideBox.checked){
@@ -48,17 +46,17 @@ list.appendChild(li);
       }
     });
   
-    // filter books
-    const searchBar = forms['search-books'].querySelector('input');
+    // filter drinks
+    const searchBar = forms['search-drinks'].querySelector('input');
     searchBar.addEventListener('keyup', (e) => {
       const term = e.target.value.toLowerCase();
-      const books = list.getElementsByTagName('li');
-      Array.from(books).forEach((book) => {
-        const title = book.firstElementChild.textContent;
+      const drinks = list.getElementsByTagName('li');
+      Array.from(drinks).forEach((drink) => {
+        const title = drink.firstElementChild.textContent;
         if(title.toLowerCase().indexOf(e.target.value) != -1){
-          book.style.display = 'block';
+          drink.style.display = 'block';
         } else {
-          book.style.display = 'none';
+          drink.style.display = 'none';
         }
       });
     });
