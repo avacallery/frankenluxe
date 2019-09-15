@@ -1,27 +1,28 @@
 document.addEventListener('DOMContentLoaded', function(){
-    var list = document.querySelector('#drink-list ul'); 
-    var forms = document.forms;   
     
-});
+    
+    const list = document.querySelector('#drink-list ul'); 
+    const forms = document.forms;   
+    
 
 //delete drinks
 list.addEventListener('click', (e) => {
     if (e.target.className == 'delete'){
-        var li = e.target.parentElement; 
+        const li = e.target.parentElement; 
         li.parentNode.removeChild(li); 
     }
 }); 
 
 //add drinks
-var addForm = forms['add-drink'];
+const addForm = forms['add-drink'];
 addForm.addEventListener('submit', function(e){
     e.preventDefault();
 
 //create elements
-var value = addForm.querySelector('input[type="text"]').value;
-var li = document.createElement('li');
-var drinkName = document.createElement('span');
-var deleteButton = document.createElement('span');
+const value = addForm.querySelector('input[type="text"]').value;
+const li = document.createElement('li');
+const drinkName = document.createElement('span');
+const deleteButton = document.createElement('span');
 
 //add text content
 drinkName.textContent = value;
@@ -36,3 +37,29 @@ li.appendChild(drinkName);
 li.appendChild(deleteButton);
 list.appendChild(li); 
 });
+
+    // hide books
+    const hideBox = document.querySelector('#hide');
+    hideBox.addEventListener('change', function(e){
+      if(hideBox.checked){
+        list.style.display = "none";
+      } else {
+        list.style.display = "initial";
+      }
+    });
+  
+    // filter books
+    const searchBar = forms['search-books'].querySelector('input');
+    searchBar.addEventListener('keyup', (e) => {
+      const term = e.target.value.toLowerCase();
+      const books = list.getElementsByTagName('li');
+      Array.from(books).forEach((book) => {
+        const title = book.firstElementChild.textContent;
+        if(title.toLowerCase().indexOf(e.target.value) != -1){
+          book.style.display = 'block';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    });
+}) 
