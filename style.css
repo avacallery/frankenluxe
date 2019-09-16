@@ -114,22 +114,3 @@ h1, h2{
     display: block;
     clear: both;
 }
-
-/*
-#tabbed-content li{
-    display: inline-block;
-    padding: 10px 14px;
-    background: #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 10px;
-}
-#tabbed-content .tab{
-    display: none;
-    border: 1px solid #ddd;
-    padding: 0 10px;
-    border-radius: 4px;
-}
-#tabbed-content .tab.active{
-    display: block;
-}
