@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
-    
+    debugger;
     const list = document.querySelector('#drink-list ul'); 
     const forms = document.forms;   
 
 //move drink
 list.addEventListener('click', (e) => {
-    if (e.target.className == 'add'){
+    if (e.target.className == 'addToCart'){
         const li = e.target.parentElement; 
         li.parentNode.removeChild(li); 
     }
@@ -28,7 +28,7 @@ addToCartButton.textContent = 'Add To Cart';
 
 //add classes
 drinkName.classList.add('name');
-addToCartButton.classList.add('Add To Cart');
+addToCartButton.classList.add('addToCart');
 
 //append to DOM
 li.appendChild(drinkName);

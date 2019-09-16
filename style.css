@@ -69,7 +69,7 @@ h1, h2{
     border-color:teal;
 }
 
-.add{
+.addToCart{
     float: right;
     background: turquoise;
     padding: 6px;
@@ -78,7 +78,7 @@ h1, h2{
     color: white;
 }
 
-.add:hover{
+.addToCart:hover{
     background: teal
 }
 
