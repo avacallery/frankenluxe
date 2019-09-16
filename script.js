@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function(){
     const list = document.querySelector('#drink-list ul'); 
     const forms = document.forms;   
 
-//delete drinks
+//move drink
 list.addEventListener('click', (e) => {
-    if (e.target.className == 'delete'){
+    if (e.target.className == 'add'){
         const li = e.target.parentElement; 
         li.parentNode.removeChild(li); 
     }
@@ -20,19 +20,19 @@ addForm.addEventListener('submit', function(e){
 const value = addForm.querySelector('input[type="text"]').value;
 const li = document.createElement('li');
 const drinkName = document.createElement('span');
-const deleteButton = document.createElement('span');
+const addToCartButton = document.createElement('span');
 
 //add text content
 drinkName.textContent = value;
-deleteButton.textContent = 'delete'; 
+addToCartButton.textContent = 'Add To Cart'; 
 
 //add classes
 drinkName.classList.add('name');
-deleteButton.classList.add('delete');
+addToCartButton.classList.add('Add To Cart');
 
 //append to DOM
 li.appendChild(drinkName);
-li.appendChild(deleteButton);
+li.appendChild(addToCartButton);
 list.appendChild(li); 
 });
 
