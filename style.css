@@ -51,12 +51,12 @@ h1, h2{
 }
 
 #drink-list, #add-book, #tabbed-content{
-    margin: 30px;
+    margin: 25px;
 }
 
 #drink-list ul, #tabbed-content ul{
     list-style-type: none;
-    padding: 0;
+    padding: 0px;
 }
 
 #drink-list li{
@@ -73,7 +73,7 @@ h1, h2{
     float: right;
     background: turquoise;
     padding: 6px;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     color: white;
 }

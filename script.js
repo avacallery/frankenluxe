@@ -36,6 +36,21 @@ li.appendChild(addToCartButton);
 list.appendChild(li); 
 });
 
+// //create new Div for Cart
+// var newDiv = document.createElement('div');
+// newDiv.id = 'addedToCart';
+// newDiv.setAttribute('title', "addedToCart");
+
+// var newDivText = document.createTextNode("Your Cart");
+// //add text to div
+// newDiv.appendChild(newDivText);
+
+// var yourCart = document.querySelector('footer .bottom'); 
+// var drinkList = document.querySelector('#drink-list');
+
+// yourCart.insertBefore(newDiv, drinklist);
+
+
     // hide drinks
     const hideBox = document.querySelector('#hide');
     hideBox.addEventListener('change', function(e){
@@ -47,17 +62,17 @@ list.appendChild(li);
     });
   
     // filter drinks
-    const searchBar = forms['search-drinks'].querySelector('input');
-    searchBar.addEventListener('keyup', (e) => {
-      const term = e.target.value.toLowerCase();
-      const drinks = list.getElementsByTagName('li');
-      Array.from(drinks).forEach((drink) => {
+   var searchBar = document.forms['search-drinks'].querySelector('input');
+    searchBar.addEventListener("keyup", function(e) {
+      var term = e.target.value.toLowerCase();
+      var drinks = list.getElementsByTagName('li');
+      Array.from(drinks).forEach(function(drink) {
         const title = drink.firstElementChild.textContent;
-        if(title.toLowerCase().indexOf(e.target.value) != -1){
+        if (title.toLowerCase().indexOf(e.target.value) != -1) {
           drink.style.display = 'block';
         } else {
           drink.style.display = 'none';
         }
-      });
+      })
     });
 }) 
