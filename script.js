@@ -2,12 +2,16 @@ document.addEventListener('DOMContentLoaded', function(){
     debugger;
     const list = document.querySelector('#drink-list ul'); 
     const forms = document.forms;   
+    const myCart = document.querySelector('#my-cart ul')
 
 //move drink
-list.addEventListener('click', (e) => {
+list.addEventListener('click', function(e) {
     if (e.target.className == 'addToCart'){
-        const li = e.target.parentElement; 
-        li.parentNode.removeChild(li); 
+        const li = e.target.parentElement[i]; 
+
+        li.parentNode.removeChild(li)
+        myCart.appendChild(li);
+        Array.from(list); 
     }
 }); 
 
@@ -32,7 +36,7 @@ addToCartButton.classList.add('addToCart');
 
 //append to DOM
 li.appendChild(drinkName);
-li.appendChild(addToCartButton);
+//li.appendChild(addToCartButton);
 list.appendChild(li); 
 });
 
