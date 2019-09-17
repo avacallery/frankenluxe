@@ -2,15 +2,18 @@ document.addEventListener('DOMContentLoaded', function(){
     debugger;
     const list = document.querySelector('#drink-list ul'); 
     const forms = document.forms;   
-    const myCart = document.querySelector('#my-cart ul')
+
 
 //move drink
 list.addEventListener('click', function(e) {
+  const myCart = document.querySelector('#my-cart');
     if (e.target.className == 'addToCart'){
         const li = e.target.parentElement; 
         li.parentNode.removeChild(li)
         myCart.appendChild(li);
         Array.from(list); 
+        li.removeChild(e.target);
+        
     }
 }); 
 
@@ -19,7 +22,8 @@ const addForm = forms['add-drink'];
 addForm.addEventListener('submit', function(e){
     e.preventDefault();
 
-//create elements
+
+    //create elements
 const value = addForm.querySelector('input[type="text"]').value;
 const li = document.createElement('li');
 const drinkName = document.createElement('span');
