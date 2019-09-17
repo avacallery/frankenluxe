@@ -71,8 +71,12 @@ h1, h2{
 
 #my-cart {
     float: right;
-    padding: 10px;
-    
+    text-align: center;
+    padding: 8px; 
+    background: #afeeee;
+    border-radius: 10px 50px 10px 50px;
+    width: 200px;
+    margin: 20px 20px;
 }
 
 .addToCart{
@@ -95,7 +99,7 @@ h1, h2{
 
 #add-drink input{
     font-family: 'Gill Sans';
-    float: left;
+    float: left; 
     display: block;
     margin: 20px 0;
     padding: 10px;
@@ -104,14 +108,13 @@ h1, h2{
     border-radius: 4px 0 0 4px;
     box-sizing: border-box;
     width: 300px;
-    float: left;
 }
 
-.hide-all {
-    float: left;
-    padding: 50px;
-    border: 70px solid #ddd
-
+#hide-list {
+    float: right;
+    padding: 20px 20px;
+    border: 10px navy;
+    background: beige
 }
 
 #add-drink button{

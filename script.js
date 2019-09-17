@@ -20,6 +20,11 @@ list.addEventListener('click', function(e) {
 //add drinks
 const addForm = forms['add-drink'];
 addForm.addEventListener('submit', function(e){
+  // const value = addForm.querySelector('input[type="text"]').value;
+  //   const suggestionBox = document.querySelector('#suggestion-box');
+  //   if (e.target.className == value) {
+  //       suggestionBox.appendChild(value);
+  //   }
     e.preventDefault();
 
 
