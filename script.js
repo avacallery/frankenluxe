@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
 //move drink
 list.addEventListener('click', function(e) {
     if (e.target.className == 'addToCart'){
-        const li = e.target.parentElement[i]; 
-
+        const li = e.target.parentElement; 
         li.parentNode.removeChild(li)
         myCart.appendChild(li);
         Array.from(list); 
@@ -36,7 +35,7 @@ addToCartButton.classList.add('addToCart');
 
 //append to DOM
 li.appendChild(drinkName);
-//li.appendChild(addToCartButton);
+li.appendChild(addToCartButton);
 list.appendChild(li); 
 });
 
