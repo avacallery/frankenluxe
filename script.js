@@ -11,7 +11,7 @@ list.addEventListener('click', function(e) {
         const li = e.target.parentElement; 
         li.parentNode.removeChild(li)
         myCart.appendChild(li);
-        Array.from(list); 
+        //Array.from(list); 
         li.removeChild(e.target);
         
     }
